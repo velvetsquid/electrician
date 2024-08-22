@@ -1,6 +1,6 @@
 site:
   name: SWM Electrical
-  site: 'https://astrowind.vercel.app'
+  site: 'https://swm-electrical.netlify.app/'
   base: '/'
   trailingSlash: false
 
