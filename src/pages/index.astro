@@ -1,0 +1,279 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'SWM Electrical — Your Trusted Family-Owned Electricians in Enfield',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+   <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: 'mailto:info.swmelectrical@gmail.com',
+        target: '_self',
+        icon: 'tabler:mail',
+      },
+      { 
+        text: 'Call Now', 
+        href: 'tel:0450759632',
+        icon: 'tabler:phone',
+      },
+    ]}
+    image={{ src: '~/assets/images/cover.jpg', alt: 'SWM Electrical Hero Image' }}
+  >
+    <Fragment slot="title">
+      Your Trusted Family-Owned<br />Electricians in Enfield
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We Get to Know You and Your Family, Not Just Your Electrical Wiring.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+   <Features
+      id="features"
+      tagline="Our Services"
+      title="What SWM Electrical Offers"
+      subtitle="We provide expert electrical services designed to keep your home or business running smoothly, efficiently, and safely."
+      items={[
+        {
+          title: 'Air-Con Maintenance & Upgrades',
+          description:
+            'Keep your home cool and efficient with expert maintenance and upgrades for evaporative air conditioning units.',
+          icon: 'tabler:air-conditioning',
+        },
+        {
+          title: 'Fan Installations',
+          description:
+            'Beat the heat with professional fan installations that enhance comfort and circulation throughout your home.',
+          icon: 'tabler:propeller',
+        },
+        {
+          title: 'Lighting Installations & Repairs',
+          description:
+            'Brighten up your space with reliable lighting installations and repairs tailored to your needs.',
+          icon: 'tabler:bulb',
+        },
+        {
+          title: 'Power Points & USB Ports Installations',
+          description:
+            'Upgrade your power access with modern power points and USB ports for ultimate convenience.',
+          icon: 'tabler:plug',
+        },
+        {
+          title: 'Meter Board Maintenance & Upgrades',
+          description:
+            'Ensure your home or business has safe and reliable power distribution with expert meter board maintenance and upgrades.',
+          icon: 'tabler:deselect',
+        },
+        {
+          title: 'Emergency Electrical Services',
+          description:
+            'Available for urgent repairs and electrical emergencies to keep you safe and restore power quickly.',
+          icon: 'tabler:alert-circle',
+        },
+      ]}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-section dark:bg-transparent"></div>
+      </Fragment>
+    </Features>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Family-Owned Electricians"
+    title="Meet SWM Electrical"
+    subtitle="At SWM Electrical, we pride ourselves on delivering trusted, reliable, and family-oriented service to our local community. Established in 2019, we bring over a decade of expertise to every project, from small repairs to major installations."
+    items={[
+      {
+        title: 'Family Values and Personalized Service',
+        description:
+          'We treat every client like family and bring over a decade of expertise to every project.',
+      },
+      {
+        title: 'Local Commitment',
+        description:
+          'Proudly serving Enfield and surrounding suburbs with integrity and dedication to our community.',
+      },
+      {
+        title: 'Expertise with Heart',
+        description:
+          'Combining technical expertise with a genuine passion for providing the best electrical solutions.',
+      },
+      {
+        title: 'Join Our Family of Satisfied Clients',
+        description:
+          'Contact us today and experience the difference of personalized, family-oriented service.',
+      },
+    ]}
+    image={{ src: '~/assets/images/screwdriver.jpg', alt: 'SWM Electrical Hero Image' }}
+  >
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  
+  <!-- Content Widget **************** -->
+
+  <Content
+    tagline="Family-Owned Electricians"
+    title="We Deliver Quality Results"
+    subtitle="Supporting SWM Electrical means supporting a local family-owned business that values trust, quality, and community. We offer a 10% discount for seniors to thank them for their contributions to our community."
+    items={[
+      {
+        title: 'Personalized Service',
+        description:
+          'We offer tailored electrical solutions, ensuring that each project is completed with attention to your unique needs and preferences.',
+      },
+      {
+        title: 'Decades of Electrical Expertise',
+        description:
+          'Our team brings over a decade of experience to provide reliable, expert electrical solutions for homes and businesses.',
+      },
+      {
+        title: 'Seniors Discount: 10% Off All Services',
+        description:
+          'We honor our senior citizens by offering a 10% discount on all services, recognizing their contributions to our community.',
+      },
+    ]}
+
+    image={{ src: '~/assets/images/drawings.jpg', alt: 'SWM Electrical Hero Image' }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-section dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features2 Widget ************** -->
+
+
+  <Testimonials
+  title="What Our Clients Say"
+  subtitle="Discover what clients have to say about their experiences with SWM Electrical."
+  testimonials={[
+    {
+      testimonial: `SWM Electrical provided top-notch service with a personal touch. The team was professional, punctual, and respectful of our home.`,
+      name: 'John Doe',
+      job: 'Homeowner, Enfield',
+      image: {
+        src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+        alt: 'John Doe Image',
+      },
+    },
+    {
+      testimonial: `Their expertise and efficiency were impressive. They installed new lighting in my shop and handled everything seamlessly.`,
+      name: 'Jane Smith',
+      job: 'Business Owner, Enfield',
+      image: {
+        src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+        alt: 'Jane Smith Image',
+      },
+    },
+    {
+      testimonial: `I had an emergency with the wiring at my office, and SWM Electrical came to the rescue. They were quick, efficient, and solved the issue professionally.`,
+      name: 'Laura Simmons',
+      job: 'Office Manager, Enfield',
+      image: {
+        src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+        alt: 'Laura Simmons Image',
+      },
+    },
+  ]}
+/>
+
+
+  <!-- FAQs Widget ******************* -->
+
+ <FAQs
+  title="Frequently Asked Questions"
+  subtitle="Find answers to some of the most common questions we receive about our services at SWM Electrical."
+  tagline="FAQs"
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: 'Why choose SWM Electrical?',
+      description:
+        "SWM Electrical is a trusted family-owned business with over a decade of experience in the industry. We pride ourselves on providing personalized service, expert electrical solutions, and a strong commitment to our local community in Enfield.",
+    },
+    {
+      title: 'What areas do you service?',
+      description:
+        "We proudly serve Enfield and the surrounding suburbs. If you're unsure whether we can service your area, please give us a call, and we'll be happy to assist.",
+    },
+    {
+      title: 'Do you offer emergency electrical services?',
+      description:
+        "Yes, we offer emergency electrical services to ensure that your urgent electrical issues are addressed promptly. Whether it's a power outage or faulty wiring, we’re here to help.",
+    },
+    {
+      title: 'What services do you provide?',
+      description:
+        "We offer a wide range of services, including air conditioning maintenance, fan installations, lighting repairs, power point and USB port installations, meter board upgrades, and more.",
+    },
+    {
+      title: 'Do you offer any discounts?',
+      description:
+        "Yes, we offer a 10% discount for senior citizens as a thank you for their contributions to the community. Contact us to find out more about our discounts and promotions.",
+    },
+    {
+      title: 'How can I schedule an appointment?',
+      description:
+        "Scheduling an appointment is easy! You can call us at 0450 759 632 or email us at info.swmelectrical@gmail.com. We’ll work with you to find a time that fits your schedule.",
+    },
+  ]}
+/>
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Contact Us',
+      href: 'mailto:info.swmelectrical@gmail.com',
+      target: '_self',
+      icon: 'tabler:mail',
+    },
+    {
+      variant: 'secondary',
+      text: 'Call Now',
+      href: 'tel:0450759632',
+      target: '_self',
+      icon: 'tabler:phone',
+    },
+  ]}
+>
+  <Fragment slot="title">
+    Get Reliable Electrical Services Today
+  </Fragment>
+
+  <Fragment slot="subtitle">
+    Trust SWM Electrical for all your electrical needs in Enfield and surrounding areas.<br class="hidden md:inline" />
+    Don't hesitate to contact us for expert advice and service!
+  </Fragment>
+</CallToAction>
